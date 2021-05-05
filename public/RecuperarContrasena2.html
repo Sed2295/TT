@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Crear Cuenta</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/ipn.jpg">
+
+    <!-- Custom styles for this template -->
+    <link href="css/signin.css" rel="stylesheet">
+</head>
+<body>
+    <div class="col-4"></div>
+        <div class="col-4 card card text-white bg-dark border-secondary text-center" style="width: 20rem;">
+            <form class="form-signin" action="/cambiar" method="post" onsubmit="getUser()">
+                <h1 class="h3 mb-3 font-weight-normal">Ingrese su nueva contraseña</h1>
+                <hr>
+                <input id="pass" name="passw" type="password" class="form-control" placeholder="Contraseña nueva" required autofocus>
+                <br>
+                <input id="pass2" type="password" class="form-control" placeholder="Confirme contraseña" required autofocus>
+                <br>
+                <input id="user" name="id" type="hidden" >
+                <input class="btn btn-outline-success" type="submit" value="Actualizar Contraseña">
+            </form>
+        </div>
+    <div class="col-4"></div>
+
+    <!--  Modal nueva contraseña no coincide -->
+    <div class="modal fade" id="newPass" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="text-center" id="exampleModalLabel"> <i class="fas fa-exclamation-triangle" style="color: orange;"></i>&nbsp La contraseña no coincide</h5>
+
+                </div>
+                <div class="modal-body">
+                    <p>La contraseña no coincide en los campos favor de verificarla.</p>
+                </div>
+                <button type="button" class="btn btn-warning text-center" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/main.js"></script>
+</html>
